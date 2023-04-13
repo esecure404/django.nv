@@ -60,7 +60,7 @@ jobs:
           name: RetireJS
           path: retirejs-report.json
         if: always()                        # what is this for?
-
+        continue-on-error: true 
   sast:
     runs-on: ubuntu-20.04
     needs: oast-frontend
