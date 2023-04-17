@@ -42,7 +42,7 @@ jobs:
           python manage.py test taskManager 
          
     
-    zap_baseline:
+  zap_baseline:
     runs-on: ubuntu-20.04
     needs: test
     steps:
@@ -57,8 +57,4 @@ jobs:
         if: always()        # what is this for?
  
 
-  prod:
-    runs-on: ubuntu-20.04
-    needs: integration
-    steps:
-      - run: echo "This is a deploy step."
+ 
