@@ -42,7 +42,7 @@ jobs:
           destination: bandit-artifact
           when: always
 
- zap_baseline:
+  zap_baseline:
     machine: true
     steps:
       - checkout
