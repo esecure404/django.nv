@@ -42,7 +42,7 @@ jobs:
           destination: bandit-artifact
           when: always
 
-  zap_baseline:
+ zap_baseline:
     machine: true
     steps:
       - checkout
@@ -76,6 +76,9 @@ workflows:
       - sast:
           requires:
             - oast-frontend
+      - zap_baseline:
+          requires:
+            - sast      
       - prod:
           type: approval
           requires:
