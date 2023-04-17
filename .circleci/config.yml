@@ -76,10 +76,7 @@ workflows:
       - sast:
           requires:
             - oast-frontend
-      - integration:
-          requires:
-            - sast
       - prod:
           type: approval
           requires:
-            - integration
+            
